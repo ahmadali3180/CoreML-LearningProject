@@ -47,7 +47,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         do {
             try handler.perform([request])
         } catch {
-            print(error)
+            print("\(error.localizedDescription)")
         }
     }
 
