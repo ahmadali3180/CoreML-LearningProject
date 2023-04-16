@@ -14,8 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
+    public var selectedSourceType: UIImagePickerController.SourceType?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -67,7 +67,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
+        selectedSourceType = .camera
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func photoTapped(_ sender: UIBarButtonItem) {
+        selectedSourceType = .photoLibrary
+        present(imagePicker, animated: true)
     }
 
 }

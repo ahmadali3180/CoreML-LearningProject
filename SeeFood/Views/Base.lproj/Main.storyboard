@@ -31,11 +31,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G01-qS-EG3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="f8f-WW-ebw">
-                            <connections>
-                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="Xk7-0Y-UyT"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="f8f-WW-ebw">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="Xk7-0Y-UyT"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="photo" catalog="system" id="ySC-CW-YFD">
+                                <connections>
+                                    <action selector="photoTapped:" destination="BYZ-38-t0r" id="COI-MV-TqP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="bJj-pY-unV" id="bjb-R6-rH4"/>
@@ -65,6 +72,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
